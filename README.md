@@ -19,14 +19,17 @@ To ensure long-term consistency and maintainability, all assets in this reposito
 The repository is organized by the **context in which an asset is used.** To find or place an asset, determine its primary purpose.
 
 ```bash
+
 ├── branding/ # Official, context-agnostic project logos and icons.
 ├── github/ # Assets used on our main GitHub Organization profile page.
 ├── releases/ # Media used exclusively within release notes, organized by version.
 │ └── v3.0.0/
 │ └── v4.0.0/
-├── wiki/ # All images and GIFs for the project's GitHub Wiki, organized by feature.
-│ └── post-processing/
-│ └── dof-engine/
+├── wiki/ # All images and GIFs for the project's GitHub Wiki.
+│ │ # Subdirectories should mirror the page names on the Wiki.
+│ ├── downloads/
+│ ├── post-processing-suite/
+│ └── troubleshooting/
 └── website/ # (Future Use) Assets for the apertureviewer.com website.
 ```
 
@@ -34,22 +37,20 @@ The repository is organized by the **context in which an asset is used.** To fin
 
 All filenames must be **lowercase** and use **hyphens** to separate words (`kebab-case`). The name should be descriptive and follow this structure:
 
-**`[type]-[subject]-[descriptor].[ext]`**
+**`[subject-or-type]-[descriptor].[ext]`**
 
-*   **`[type]` (Optional):** The kind of asset.
-    *   Examples: `screenshot`, `diagram`, `demo`, `photo`, `icon`, `logo`.
-*   **`[subject]`:** The feature or element the asset depicts.
-    *   Examples: `dof-ui`, `color-balance`, `shadow-system`.
+*   **`[subject-or-type]`:** The primary subject of the image or its type.
+    *   Examples: `ui-panel`, `color-balance-slider`, `diagram`, `screenshot`.
 *   **`[descriptor]` (Optional):** Other clarifying details.
-    *   Examples: `animated`, `dark-theme`, `before-after`.
+    *   Examples: `highlighted`, `before-after`, `error-message`.
 
 #### Example
 
-An animated GIF demonstrating the shadow system for the v3.0.0 release notes would be located at:
-`releases/v3.0.0/demo-shadow-system-animated.gif`
+A screenshot of the download options for the "Downloads" wiki page would be located at:
+`wiki/downloads/screenshot-installer-options.png`
 
-A screenshot of the Depth of Field UI for the Wiki would be located at:
-`wiki/dof-engine/screenshot-dof-ui.png`
+An animated GIF demonstrating the color balance tool for the "Post-Processing Suite" wiki page would be located at:
+`wiki/post-processing-suite/demo-color-balance.gif`
 
 ---
 
